@@ -1,22 +1,30 @@
 audiosynth
 ==========
 
+Синтезатор динамических волновых форм аудио, написан на языке Javascript.
 Dynamic waveform audio synthesizer, written in Javascript.
 
+Генерируйте музыкальные ноты динамически
+и проиграйте их в своем браузере, используя HTML5-элемент аудио  HTML5 Audio Element.
 Generate musical notes dynamically
 and play them in your browser using the HTML5 Audio Element.
 
+Не требуются никакие статические файлы. (Помимо исходника, конечно!)
 No static files required. (Besides the source, of course!)
 
-Demo
+Демонстрационный пример
 ----
 
+Чтобы увидеть в действии демонстрационный пример с синтезатором audiosynth, 
+посетите сайт http://keithwhor.com/music/
 To see a demo of audiosynth in action, visit http://keithwhor.com/music/
 
 
-Installation
+Установка и настройка
 ------------
 
+Подразумевая, что файл audiosynth.js находится в вашем текущем каталоге,
+импортируйте пакет синтеза, используя скрипт:
 Assuming audiosynth.js is in your current directory, import package using:
 
 ```html
@@ -24,7 +32,7 @@ Assuming audiosynth.js is in your current directory, import package using:
 ```
 
 
-Usage
+Использование
 -----
 
 audiosynth implements a singleton class, ```AudioSynth```. By default, the global (window) variable ```Synth```
