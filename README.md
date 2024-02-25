@@ -146,7 +146,7 @@ Synth.setSampleRate(20000); // sets sample rate to 20000Hz
 		       // возвращает частоту дискретизации  20000
 Synth.getSampleRate(); // returns 20000
 ```
-
+Объем слишком? Измельченный объем выборки так же.
 Volume a bit much? Adust the volume of the sample similarly.
 
 ```javascript
@@ -165,10 +165,11 @@ Synth.getVolume(); // returns 0.1337
 
 Расширенное использование
 --------------
-
+Дополнительные профили звука могут быть загружены, используя функцию загрузки профиля звука '''Synth.loadSoundProfile ()'''
 Additional sound profiles can be loaded using ```Synth.loadSoundProfile()```
 
 ```javascript
+// Загрузите профиль звука из объекта...
 // Load a sound profile from an object...
 Synth.loadSoundProfile({
 	// name it
