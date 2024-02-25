@@ -6,6 +6,7 @@ Dynamic waveform audio synthesizer, written in Javascript.
 
 Генерируйте музыкальные ноты динамически
 и проиграйте их в своем браузере, используя HTML5-элемент аудио  HTML5 Audio Element.
+
 Generate musical notes dynamically
 and play them in your browser using the HTML5 Audio Element.
 
