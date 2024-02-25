@@ -73,7 +73,7 @@ Synth.generate(sound, note, octave, duration);
 		(Use the respective sharp!)
 	
 	octave
-		октава # нот, которые хотите проиграть
+		номер октавы у нот, которые хотите проиграть
 		the octave # of the note you wish to play
 		
 	duration
@@ -119,7 +119,7 @@ __organ__ (id 1)  // профиль звука 'орган'
 
 __acoustic__ (id 2) // профиль звука 'аккустическая гитара'
 
-__edm__ (id 3) // профиль звука 'аккустическая гитара'
+__edm__ (id 3) // профиль звука 'Brutal death metal'
 
 ```javascript
   						   // проигрывайте на своей акустической гитаре!
