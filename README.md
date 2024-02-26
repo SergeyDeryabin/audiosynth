@@ -2,32 +2,28 @@ audiosynth
 ==========
 
 Синтезатор динамических волновых форм аудио, написан на языке Javascript.
-
-Dynamic waveform audio synthesizer, written in Javascript.
+(Dynamic waveform audio synthesizer, written in Javascript.)
 
 Генерируйте музыкальные ноты динамически
-и проиграйте их в своем браузере, используя HTML5-элемент аудио  HTML5 Audio Element.
-
-Generate musical notes dynamically
-and play them in your browser using the HTML5 Audio Element.
+и проиграйте их в своем браузере, используя HTML5-элемент аудио  HTML5 Audio Element. (Generate musical notes dynamically
+and play them in your browser using the HTML5 Audio Element.)
 
 Не требуются никакие статические файлы. (Помимо исходника, конечно!)
-No static files required. (Besides the source, of course!)
+(No static files required. (Besides the source, of course!))
 
 Демонстрационный пример
 ----
 
 Чтобы увидеть в действии демонстрационный пример с синтезатором audiosynth, 
 посетите сайт http://keithwhor.com/music/
-To see a demo of audiosynth in action, visit http://keithwhor.com/music/
-
+(To see a demo of audiosynth in action, visit http://keithwhor.com/music/)
 
 Установка и настройка
 ------------
 
 Подразумевая, что файл audiosynth.js находится в вашем текущем каталоге,
 импортируйте пакет синтеза, используя скрипт:
-Assuming audiosynth.js is in your current directory, import package using:
+(Assuming audiosynth.js is in your current directory, import package using:)
 
 ```html
 <script src="audiosynth.js"></script>
@@ -39,12 +35,13 @@ Assuming audiosynth.js is in your current directory, import package using:
 
 Класс синтезатор аудио  audiosynth реализует singleton-класс, '''AudioSynth'''. По умолчанию, глобальная(окно window) переменная '''Synth'''
 содержит экземпляр класса синтезатор аудио '''AudioSynth'''.
-audiosynth implements a singleton class, ```AudioSynth```. By default, the global (window) variable ```Synth```
-is the instance of the class.
+(audiosynth implements a singleton class, ```AudioSynth```. By default, the global (window) variable ```Synth```
+is the instance of the class.)
 
 Любая попытка инстанцировать новый объект класса синтезатор аудио '''AudioSynth''' только создаст ссылки на
-исходный объект класса синтезатор аудио '''AudioSynth''. Any attempt to instantiate new ```AudioSynth``` object will only create references to
-the original object.
+исходный объект класса синтезатор аудио '''AudioSynth''. 
+(Any attempt to instantiate new ```AudioSynth``` object will only create references to
+the original object.)
 
 ```javascript
 Synth instanceof AudioSynth; // верно true
@@ -56,56 +53,57 @@ testInstance === Synth; //  верно true
 ```
 
 === Использование класса синтезатор аудио '''AudioSynth''', для генерации .WAV-файлов...
-To use ```AudioSynth``` to generate .WAV files...
+(To use ```AudioSynth``` to generate .WAV files...)
 
 ```javascript
 Synth.generate(sound, note, octave, duration);
 /*
 	Генерирует base64-закодированный dataURI wavefile (.WAV)-файл,содержащий ваши данные.
-	Will generate a base64-encoded dataURI wavefile (.WAV) containing your data.
+	(Will generate a base64-encoded dataURI wavefile (.WAV) containing your data.)
 
 	sound
 		числовой индекс или строка, относящаяся к звуковому профилю (по идентификатору или по имени, соответственно)
-		a numeric index or string referring to a sound profile (by id or name, respectively)
+		(a numeric index or string referring to a sound profile (by id or name, respectively))
 	
 	note
 		нота, которую хотите проиграть (A, B, C, D, E, F, G). Поддерживаются диезы (т.е. C#), но не бемоли.
 		(Используйте соответствующий диез!)
-		the note you wish to play (A,B,C,D,E,F,G). Supports sharps (i.e. C#) but not flats.
-		(Use the respective sharp!)
+		(the note you wish to play (A,B,C,D,E,F,G). Supports sharps (i.e. C#) but not flats.
+		(Use the respective sharp!))
 	
 	octave
 		номер октавы у нот, которые хотите проиграть
-		the octave # of the note you wish to play
+		(the octave # of the note you wish to play)
 		
 	duration
 		длительность(в секундах) ноты
-		the duration (in seconds) of the note
+		(the duration (in seconds) of the note)
 */
 ```
 
 === Вы можете немедленно проиграть ноты, используя...
-You can play notes instantly using...
+(You can play notes instantly using...)
 
 ```javascript
 /*
 	Те же параметры как и в функции генерации файла Synth.generate,
 	только эта функция создает HTML-элемент аудио HTML Audio element, играет его и вызгружает его после завершения.
-	Same arguments as Synth.generate,
-	only this creates an HTML Audio element, plays it, and unloads it upon completion.
+	(Same arguments as Synth.generate,
+	only this creates an HTML Audio element, plays it, and unloads it upon completion.)
 */
 Synth.play(sound, note, octave, duration);
 ```
 
 Вы можете также создать специфичные инструменты(объекты, что ссылаются на функцию генерации файла .generate и
 на функцию немедленного проигрывания ноты), связанные со специфичными звуками).
-You may also create individual instruments(objects that reference .generate and .play, bound to specific
-sounds).
+(You may also create individual instruments(objects that reference .generate and .play, bound to specific
+sounds).)
 
 ```javascript
-var piano = Synth.createInstrument('piano'); // профиль звука 'фортепьяно' 
-piano.play('C', 4, 2); // plays C4 for 2s using the 'piano' sound profile
+var piano = Synth.createInstrument('piano'); // профиль звука 'фортепьяно'
+
 // немедленно проигрывает ноту C4 в течение 2 с, используя профиль звука 'фортепьяно' 
+piano.play('C', 4, 2); // plays C4 for 2s using the 'piano' sound profile 
 ```
 
 
@@ -113,7 +111,7 @@ piano.play('C', 4, 2); // plays C4 for 2s using the 'piano' sound profile
 --------------
 
 '''AudioSynth''' идет с четырьмя профилями звука по умолчанию.
-```AudioSynth``` comes with four default sound profiles.
+(```AudioSynth``` comes with four default sound profiles.)
 
 __piano__ (id 0)  // профиль звука 'фортепьяно'
 
@@ -133,12 +131,12 @@ var acoustic = Synth.createInstrument('acoustic'); // play with your acoustic gu
 -----------------
 
 Низкая производительность? Частота дискретизации по умолчанию для синтезатора AudioSynth составляет 44100 Гц (качество CD). Это может быть затратным бременем на вашем браузере.
-Poor performance? The default sampling rate for AudioSynth is 44100Hz (CD quality). This can be taxing on your browser.
+(Poor performance? The default sampling rate for AudioSynth is 44100Hz (CD quality). This can be taxing on your browser.)
 
 Чтобы изменить частоту дискретизации, используйте функцию установки частоты дискретизации '''Synth.setSampleRate(n)'''
 Обратите внимание на то, что более низкие частоты дискретизации приравняются к более плохому качеству звука, специально для более высоких нот.
-To change the sampling rate, use ```Synth.setSampleRate(n)```
-Please note that lower sampling rates will equate to poorer sound quality, especially for higher notes.
+(To change the sampling rate, use ```Synth.setSampleRate(n)```
+Please note that lower sampling rates will equate to poorer sound quality, especially for higher notes.)
 
 ```javascript
 // Можно установить значения только между 4000 Гц и 44100 Гц.
