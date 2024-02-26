@@ -87,15 +87,14 @@ Synth.generate(sound, note, octave, duration);
 ```javascript
 /*
 	Те же параметры как и в функции генерации файла Synth.generate,
-	только эта функция создает HTML-элемент аудио HTML Audio element, играет его и вызгружает его после завершения.
-	(Same arguments as Synth.generate,
+	только эта функция создает HTML-элемент аудио HTML Audio element, играет его и вызгружает его
+ 	после завершения. (Same arguments as Synth.generate,
 	only this creates an HTML Audio element, plays it, and unloads it upon completion.)
 */
 Synth.play(sound, note, octave, duration);
 ```
 
-Вы можете также создать специфичные инструменты(объекты, что ссылаются на функцию генерации файла .generate и
-на функцию немедленного проигрывания ноты), связанные со специфичными звуками).
+Вы можете также создать специфичные инструменты(объекты, что ссылаются на функцию генерации файла .generate и на функцию немедленного проигрывания ноты), связанные со специфичными звуками).
 (You may also create individual instruments(objects that reference .generate and .play, bound to specific
 sounds).)
 
@@ -130,12 +129,10 @@ var acoustic = Synth.createInstrument('acoustic'); // play with your acoustic gu
 Изменение настроек
 -----------------
 
-Низкая производительность? Частота дискретизации по умолчанию для синтезатора AudioSynth составляет 44100 Гц (качество CD). Это может быть затратным бременем на вашем браузере.
-(Poor performance? The default sampling rate for AudioSynth is 44100Hz (CD quality). This can be taxing on your browser.)
+Низкая производительность? Частота дискретизации по умолчанию для синтезатора AudioSynth составляет 44100 Гц (качество CD). Это может быть затратным бременем на вашем браузере.(Poor performance? The default sampling rate for AudioSynth is 44100Hz (CD quality). This can be taxing on your browser.)
 
 Чтобы изменить частоту дискретизации, используйте функцию установки частоты дискретизации '''Synth.setSampleRate(n)'''
-Обратите внимание на то, что более низкие частоты дискретизации приравняются к более плохому качеству звука, специально для более высоких нот.
-(To change the sampling rate, use ```Synth.setSampleRate(n)```
+Обратите внимание на то, что более низкие частоты дискретизации приравняются к более плохому качеству звука, специально для более высоких нот.(To change the sampling rate, use ```Synth.setSampleRate(n)```
 Please note that lower sampling rates will equate to poorer sound quality, especially for higher notes.)
 
 ```javascript
@@ -165,8 +162,7 @@ Synth.getVolume(); // returns 0.1337
 
 Расширенное использование
 --------------
-Дополнительные профили звука могут быть загружены, используя функцию загрузки профиля звука '''Synth.loadSoundProfile ()'''
-Additional sound profiles can be loaded using ```Synth.loadSoundProfile()```
+Дополнительные профили звука могут быть загружены, используя функцию загрузки профиля звука '''Synth.loadSoundProfile ()'''(Additional sound profiles can be loaded using ```Synth.loadSoundProfile()```)
 
 ```javascript
 // Загрузите профиль звука из объекта...
@@ -174,46 +170,50 @@ Additional sound profiles can be loaded using ```Synth.loadSoundProfile()```
 Synth.loadSoundProfile({
 	// name it
 	name: 'my_sound',
+	// WIP: возвратите отрезок времени в секундах, атака длится
 	// WIP: return the length of time, in seconds, the attack lasts
 	attack: function(sampleRate, frequency, volume) { ... },
+	// WIP: возвратите число, представляющее уровень затухания сигнала.
 	// WIP: return a number representing the rate of signal decay.
 	// larger = faster decay
 	dampen: function(sampleRate, frequency, volume) { ... },
+	// волновая функция: вычислите амплитуду своей синусоидальной волны на основе i (индекс)
 	// wave function: calculate the amplitude of your sine wave based on i (index)
 	wave: function(i, sampleRate, frequency, volume) {
 		/*
-		Here we have access to...
+		Здесь у нас есть доступ  к...
+		this.modulate: массив загруженных частот
+		this.vars: любые временные переменные, которые вы хотите отслеживать
+		(Here we have access to...
 		this.modulate : an array of loaded frequency
-		this.vars : any temporary variables you wish to keep track of
+		this.vars : any temporary variables you wish to keep track of)
 		*/
 	}
 	
 });
 ```
 
-A rough guide to waveform generation can be found at http://keithwhor.com/music/
+Грубое руководство по генерации формы волны может быть найдено в http://keithwhor.com/music/(A rough guide to waveform generation can be found at http://keithwhor.com/music/)
 
 
-Debugging
+Отладка
 ---------
 
-If you're hanging on note generation (for default or custom sound profiles), use ```Synth.debug()```
-to enable debugging.
+Если вы зависаете на генерации нот(для профилей по умолчанию или нестандартных звуковых профилей), то используйте '''Synth.debug ()''', чтобы включить режим отладки. (If you're hanging on note generation (for default or custom sound profiles), use ```Synth.debug()``` to enable debugging.
+Это журналируем  времена генерации нот в вашей консоли.(This will log note generation times in your console.)
 
 
-This will log note generation times in your console.
-
-
-Credits and Acknowledgements
+Кредиты и подтверждения
 ----------------------------
 
-Special thanks to Albert Pham (http://www.sk89q.com/) for Dynamic .WAV file generation,
+Особая благодарность Альберту Паму(Albert Pham) (http://www.sk89q.com/) за динамическую генерацию .WAV -файла, облегчение работы с помощью (http://www.sk89q.com/playground/jswav/) и благодарность Хэсен эль Джуди(Hasen el Judy) (http://dev.hasenj.org/post/4517734448) за информацию о синтезе Karplus-Strong
+String Synthesis. (Special thanks to Albert Pham (http://www.sk89q.com/) for Dynamic .WAV file generation,
 the work off of which this is based (http://www.sk89q.com/playground/jswav/)
 and Hasen el Judy (http://dev.hasenj.org/post/4517734448) for information regarding Karplus-Strong
-String Synthesis.
+String Synthesis.)
 
 
-Further Reading
+Дополнительные материалы для чтения
 ---------------
 
 __.WAV Audio Files__
@@ -232,11 +232,8 @@ http://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis
 http://music.columbia.edu/cmc/musicandcomputers/chapter4/04_09.php
 
 
-Contact
+Контакты
 -------
 
-Feel free to e-mail me at keithwhor at gmail dot com
-
-or follow me on Twitter, @keithwhor
-
-If you like, feel free to share! :) Always appreciated.
+Не стесняйтесь посылать мне по электронной почте в keithwhor в com точки Gmail или следуйте за мной на Twitter, @keithwhor. Если Вам нравится, не стесняйтесь совместно использовать!:) Всегда ценивший.
+(Feel free to e-mail me at keithwhor at gmail dot com or follow me on Twitter, @keithwhor. If you like, feel free to share! :) Always appreciated.)
