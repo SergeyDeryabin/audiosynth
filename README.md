@@ -206,7 +206,7 @@ Synth.loadSoundProfile({
 Кредиты и подтверждения
 ----------------------------
 
-Особая благодарность Альберту Паму(Albert Pham) (http://www.sk89q.com/) за динамическую генерацию .WAV -файла, облегчение работы с помощью (http://www.sk89q.com/playground/jswav/) и благодарность Хэсен эль Джуди(Hasen el Judy) (http://dev.hasenj.org/post/4517734448) за информацию о синтезе Karplus-Strong
+Особая благодарность Альберту Паму(Albert Pham)[**http://www.sk89q.com/**](http://www.sk89q.com/) за динамическую генерацию .WAV -файла, облегчение работы с помощью [**http://www.sk89q.com/playground/jswav/**](http://www.sk89q.com/playground/jswav/) и благодарность Хэсен эль Джуди(Hasen el Judy) [**http://dev.hasenj.org/post/4517734448**](http://dev.hasenj.org/post/4517734448) за информацию о синтезе Karplus-Strong
 String Synthesis. (Special thanks to Albert Pham (http://www.sk89q.com/) for Dynamic .WAV file generation,
 the work off of which this is based (http://www.sk89q.com/playground/jswav/)
 and Hasen el Judy (http://dev.hasenj.org/post/4517734448) for information regarding Karplus-Strong
