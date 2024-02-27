@@ -16,7 +16,7 @@ and play them in your browser using the HTML5 Audio Element.)
 
 Чтобы увидеть в действии демонстрационный пример с синтезатором audiosynth, 
 посетите сайт [**http://keithwhor.com/music/**](http://keithwhor.com/music/)
-(To see a demo of audiosynth in action, visit http://keithwhor.com/music/)
+(To see a demo of audiosynth in action, visit  [**http://keithwhor.com/music/**](http://keithwhor.com/music/))
 
 Установка и настройка
 ------------
@@ -218,18 +218,17 @@ String Synthesis.)
 
 __.WAV Audio Files__
 
-http://en.wikipedia.org/wiki/.WAV_file
+[**http://en.wikipedia.org/wiki/.WAV_file**](http://en.wikipedia.org/wiki/.WAV_file)
 
 
 __Sound Synthesis__
+[**http://www.acoustics.salford.ac.uk/acoustics_info/sound_synthesis/**](http://www.acoustics.salford.ac.uk/acoustics_info/sound_synthesis/)
 
-http://www.acoustics.salford.ac.uk/acoustics_info/sound_synthesis/
-
+ 
 
 __"acoustic" sound profile__ generated using __Karplus-Strong String Synthesis__:
-
-http://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis
-http://music.columbia.edu/cmc/musicandcomputers/chapter4/04_09.php
+[**http://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis**](http://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis)
+[**http://music.columbia.edu/cmc/musicandcomputers/chapter4/04_09.php**](http://music.columbia.edu/cmc/musicandcomputers/chapter4/04_09.php)
 
 
 Контакты
