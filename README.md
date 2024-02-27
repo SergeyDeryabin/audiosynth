@@ -15,7 +15,7 @@ and play them in your browser using the HTML5 Audio Element.)
 ----
 
 Чтобы увидеть в действии демонстрационный пример с синтезатором audiosynth, 
-посетите сайт http://keithwhor.com/music/
+посетите сайт [**http://keithwhor.com/music/**](http://keithwhor.com/music/)
 (To see a demo of audiosynth in action, visit http://keithwhor.com/music/)
 
 Установка и настройка
